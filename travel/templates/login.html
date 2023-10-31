@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>*{
+        background-color: wheat;
+        font-family: sans-serif;
+        text-align: center;
+            }
+            input{
+                text-align: left;
+                background-color: aliceblue;
+                padding: 10px 20px;
+                margin-bottom: 5px;
+                height: 20px;
+                width: 500px;
+                border-radius: 10px;
+            }
+            .btn{
+                background-color: rgb(236, 114, 38);
+                color: white;
+                font-size: medium;
+                text-align: center;
+                padding: 10px;
+                height: 50px;
+                width: 150px;
+                border-radius: 30px;
+                
+            }
+            h2{
+                color: red;
+            }
+
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="login" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Enter your Username"><br>
+        <input type="password" name="password" placeholder="Enter your Password"><br>
+        <input class="btn" type="submit">
+    </form>
+</body>
+</html>
